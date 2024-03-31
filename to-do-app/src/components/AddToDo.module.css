@@ -1,0 +1,21 @@
+
+input{
+    width: 100%;
+    text-align: left;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    
+    background-color: bisque;
+}
+button{
+    width: 80%;
+}
+.myrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
