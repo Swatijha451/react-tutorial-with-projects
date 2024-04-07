@@ -3,7 +3,7 @@ function ToDoItem({todoName,todoDate}){
 
     return(
         <div className="container">
-                <div className="row ">
+                <div className="row myrow">
                     <div className="col-6">{todoName}</div>
                     <div className="col-4">{todoDate}</div>
                     <div className="col-2">

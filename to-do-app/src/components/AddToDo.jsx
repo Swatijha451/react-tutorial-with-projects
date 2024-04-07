@@ -12,9 +12,7 @@ function AddToDo() {
                 <input type="date" ></input>
             </div>
             <div className="col-2">
-                <button type="button" className="btn btn-outline-success myButton">
-                    Add
-                </button>
+                <button type="button" className="btn btn-outline-success myButton">Add</button>
             </div>
       </div>
     </div>
