@@ -1,0 +1,12 @@
+.container{
+    margin :auto;
+    width: 50%;
+    min-width: 300px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    
+    margin-top: 5rem;
+    
+
+}
