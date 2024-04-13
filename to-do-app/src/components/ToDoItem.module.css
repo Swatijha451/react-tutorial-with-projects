@@ -1,8 +1,9 @@
 .myrow{
-    height: 2rem;
+    height: 2remrem;
+    /* border: 1px solid rgb(116, 112, 60); */
     text-align: left;
-    font-size: 1rem;
-    margin-top: 5rem;   
+    font-size: 1.2rem;
+    margin-top: 1rem;   
 }
 button{
     margin-left: 0.1rem;

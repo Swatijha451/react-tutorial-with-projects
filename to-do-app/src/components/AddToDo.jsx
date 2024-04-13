@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./AddToDo.module.css"
+import { IoMdAdd } from "react-icons/io";
 
 
 function AddToDo({onNewItem}) {
@@ -35,9 +36,10 @@ function AddToDo({onNewItem}) {
                 <input type="date" value={dueDate} onChange={handleDateChange}></input>
             </div>
             <div className="col-2">
-                <button type="button" className="btn btn-outline-success"
+                <button type="button" className="btn btn-success"
                 onClick={handleAddButtonClicked}
-                >Add</button>
+                ><IoMdAdd />
+                </button>
             </div>
       </div>
     </div>
