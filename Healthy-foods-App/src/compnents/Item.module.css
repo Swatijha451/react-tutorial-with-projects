@@ -2,3 +2,7 @@
     width: 80px;
     float: right;
 }
+.span{
+    text-align: left;
+    color: rgb(82, 78, 78);background-color: aqua;
+}

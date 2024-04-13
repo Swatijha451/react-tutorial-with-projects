@@ -1,11 +1,16 @@
 import styles from "./Item.module.css";
 
-const Item=({foodItems, handleBuyButton})=>{
+const Item=({foodItems,bought, handleBuyButton})=>{
     
 
     return (
         <>
-            <li  className="list-group-item"><span className="span">{foodItems}</span><button className={`${styles.button} btn btn-success`} onClick={handleBuyButton}>Buy</button></li>
+            <li  className={`list-group-item ${bought && "active"} `}>
+                <span className="span">{foodItems}</span>
+            <button className={`${styles.button} btn btn-success`} 
+            onClick={handleBuyButton}>
+                Buy</button>
+            </li>
         </>
     )
 }
