@@ -27,8 +27,11 @@ function App() {
 
   const handleNewItem=(itemName,dueDate)=>{
     // console.log(`new item ${itemName} Date:${dueDate}`)
-    const newtodoItem=[...items,{itemName:itemName,dueDate:dueDate}];
-    setItem(newtodoItem);
+    // const newtodoItem=[...items,{itemName:itemName,dueDate:dueDate}];
+    // setItem(newtodoItem);
+    setItem((currValue)=>[//functional update
+      ...currValue,{itemName:itemName,dueDate:dueDate}
+    ])
   }
 
   const handleDeleteButton=(todoItemName)=>{//believing the name to be unique
