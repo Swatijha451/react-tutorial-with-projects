@@ -2,16 +2,24 @@
 import styles from "./AddToDo.module.css"
 import { IoMdAdd } from "react-icons/io";
 import { useRef } from "react";
+import { useContext } from "react";
+import { todoItemsContext } from "../store/todoItemsContext";
+import { useState } from "react";
 
 
-function AddToDo({onNewItem}) {
+function AddToDo() {
+//4th code using context api
+const {addNewItem}=useContext(todoItemsContext);
+
+
+
 
   // const [todoName,settodoName]=useState("");
   // const [dueDate,setdueDate]=useState("");
 
   const todoNameElement=useRef();
   const dueDateElement=useRef();
- 
+ //1st code
   // const handleNameChange=(event)=>{
   //   settodoName(event.target.value);
   // }
@@ -20,6 +28,8 @@ function AddToDo({onNewItem}) {
   //   setdueDate(event.target.value);
   // }
 
+
+  //3rd code
   const handleAddButtonClicked=(event)=>{
     event.preventDefault();
 
@@ -27,8 +37,9 @@ function AddToDo({onNewItem}) {
     const dueDate=dueDateElement.current.value;
     todoNameElement.current.value="";
     dueDateElement.current.value="";
-    onNewItem(todoName,dueDate);
+    addNewItem(todoName,dueDate);
 
+//2ndcode
     // onNewItem(todoName,dueDate);
     // console.log(event);
     //setting it empty after setting value
@@ -44,7 +55,7 @@ function AddToDo({onNewItem}) {
                 <input type="text" 
                 ref={todoNameElement}
                 placeholder="Enter your task to-do here" 
-                
+
                 // value={todoName} 
                 // onChange={handleNameChange}
 
