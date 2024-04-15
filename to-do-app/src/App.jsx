@@ -47,11 +47,14 @@ function App() {
 
   return (
     <todoItemsContext.Provider 
-    value={{
-      items:items,
-      addNewItem:addNewItem,
-      deleteItem:deleteItem
-    }}  >
+      value={
+        {
+        items:items,
+        addNewItem:addNewItem,
+        deleteItem:deleteItem,
+        }
+      } 
+     >
       <center className={styles.container}>
         <AppName/>
         <AddToDo/>
