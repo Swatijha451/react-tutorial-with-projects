@@ -8,7 +8,7 @@ export const todoItemsContext=createContext(
     deleteItem:()=>{},
     }
 );
-const[items,dispatchTodoItems]=useReducer(todoItemReducer,[]);//redcer function, initial state   
+  
 
 const todoItemReducer=(currTodoItems,action)=>{
     let newTodoItems=currTodoItems;
@@ -28,7 +28,10 @@ const todoItemReducer=(currTodoItems,action)=>{
   }
 
 //react component to have all the logic
-const todoItemsContextProvider =({children})=>{
+const TodoItemsContextProvider =({children})=>{
+
+    const[items,dispatchTodoItems]=useReducer(todoItemReducer,[]);//redcer function, initial state 
+
     const addNewItem=(itemName,dueDate)=>{
         const newItemAction={
           type:"NEW_ITEM",
@@ -67,4 +70,4 @@ const todoItemsContextProvider =({children})=>{
     );
 }
 
-export default todoItemsContextProvider;
+export default TodoItemsContextProvider;

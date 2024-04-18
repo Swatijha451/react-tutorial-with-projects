@@ -6,7 +6,7 @@ import ToDoItems from "./components/ToDoItems";
 import styles from './App.module.css';
 import Welcome from "./components/Welcome";
 //import { useState } from "react";
-import todoItemsContextProvider from "./store/todoItemsContext";
+import TodoItemsContextProvider from "./store/todoItemsContext";
 //import { useReducer } from "react";
 
 // const todoItemReducer=(currTodoItems,action)=>{
@@ -94,14 +94,14 @@ function App() {
     //  >
 
   return ( 
-    <todoItemsContextProvider>
+    <TodoItemsContextProvider>
       <center className={styles.container}>
         <AppName/>
         <AddToDo/>
         <ToDoItems></ToDoItems> 
         <Welcome></Welcome>
       </center>
-    </todoItemsContextProvider>
+    </TodoItemsContextProvider>
   );
 }
 
